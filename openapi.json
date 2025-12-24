@@ -1,0 +1,94 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Sample API",
+        "version": "1.0.0",
+        "description": "A sample API to test the Camie Docs platform features."
+    },
+    "servers": [
+        {
+            "url": "https://api.example.com",
+            "description": "Production server"
+        }
+    ],
+    "paths": {
+        "/assistants": {
+            "post": {
+                "tags": [
+                    "Assistants"
+                ],
+                "summary": "Create Assistant",
+                "description": "Create a new AI assistant instance.",
+                "responses": {
+                    "201": {
+                        "description": "Assistant created successfully"
+                    }
+                }
+            },
+            "get": {
+                "tags": [
+                    "Assistants"
+                ],
+                "summary": "List Assistants",
+                "description": "Retrieve a list of all your AI assistants.",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/assistants/{assistant_id}": {
+            "get": {
+                "tags": [
+                    "Assistants"
+                ],
+                "summary": "Get Assistant",
+                "description": "Retrieve details of a specific assistant.",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "Assistants"
+                ],
+                "summary": "Update Assistant",
+                "description": "Modify settings for an existing assistant.",
+                "responses": {
+                    "200": {
+                        "description": "Assistant updated successfully"
+                    }
+                }
+            }
+        },
+        "/squads": {
+            "post": {
+                "tags": [
+                    "Squads"
+                ],
+                "summary": "Create Squad",
+                "description": "Group multiple assistants into a squad.",
+                "responses": {
+                    "201": {
+                        "description": "Squad created successfully"
+                    }
+                }
+            },
+            "get": {
+                "tags": [
+                    "Squads"
+                ],
+                "summary": "List Squads",
+                "description": "List all assistant squads.",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        }
+    }
+}
